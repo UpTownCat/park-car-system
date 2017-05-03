@@ -22,7 +22,9 @@
     </style>
     <script type="text/javascript">
         $(function () {
-            page.init(6, 2, 10, "");
+            var placeIndex = "${index }";
+            var placeTotal = "${total}";
+            page.init(6, placeIndex, placeTotal, "");
             $(".pageItem").click(function () {
                 var href = this.href;
                 var index = href.substring(href.lastIndexOf("=") + 1, href.length);
@@ -71,7 +73,7 @@
             <div class="panel-body">
                 <table class="table table-bordered" style="border: 0px solid #f0ad4e">
                     <tbody>
-                        <c:forEach begin="0" end="${row - 1 }" varStatus="status">
+                        <c:forEach begin="0" end="${row }" varStatus="status">
                             <tr>
                                 <c:forEach items="${places }" var="place" begin="${status.index * 3 }" end="${(status.index + 1) * 3 - 1}">
                                     <td>

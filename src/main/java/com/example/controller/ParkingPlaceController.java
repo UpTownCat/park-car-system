@@ -5,6 +5,7 @@ import com.example.bean.ParkingPlaceExample;
 import com.example.bean.ParkingSeatExample;
 import com.example.service.ParkingPlaceService;
 import com.example.service.ParkingSeatService;
+import com.example.util.CommonUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -34,7 +35,6 @@ public class ParkingPlaceController {
     @RequestMapping(value = "/", method = RequestMethod.POST)
     @ResponseBody
     public int addParkingPlace(ParkingPlace parkingPlace) {
-        System.out.println("init");
         return parkingPlaceService.insert(parkingPlace);
     }
 
@@ -45,16 +45,65 @@ public class ParkingPlaceController {
      * @return
      */
     @RequestMapping(value = "/list", method = RequestMethod.GET)
-    public String listParkingPlace(@RequestParam(value = "index", required = false)Integer index, Map<String, Object> map) {
+    public String listParkingPlace(@RequestParam(value = "index", required = false)Integer index,
+                                   @RequestParam(value = "order", required = false)Integer tag,
+                                   @RequestParam(value = "name", required = false)String name,
+                                   Map<String, Object> map) {
         if(index == null || index < 1) {
             index = 1;
         }
         ParkingPlaceExample example = new ParkingPlaceExample();
-        int size = 9;
-        int begin = (index - 1) * size;
-        int end = begin + size;
-        example.setOrderByClause("1 limit " + begin + " , " + size);
+        //拼接查询条件
+        ParkingPlaceExample.Criteria criteria = example.createCriteria();
+        if(name != null) {
+            criteria.andNameLike("%" + name + "%");
+        }else {
+            name = "";
+        }
+        //进行分页和排序
+        String order = getPriceOrder(tag);
+        example.setOrderByClause(order + CommonUtil.getPageSql(index, 9));
         List<ParkingPlace> places = parkingPlaceService.selectByExample(example);
+        setAvailableSeat(places);
+        //计算一共有多少行
+        int row = places.size() % 3 == 0 ? places.size() / 3 : places.size() / 3 + 1;
+        //获取和计算记录总数
+        long total = parkingPlaceService.countByExample(example);
+        total = total % 9 == 0 ? total / 9 + 1 : total / 9 + 2;
+        map.put("places", places);
+        map.put("row", row);
+        map.put("index", index);
+        map.put("order", tag);
+        map.put("name", name);
+        map.put("total", total);
+        return "/parkingplace/parkingplace_list";
+    }
+
+    /**
+     * 获得根据价格排序的str
+     * @param tag
+     * @return
+     */
+    private String getPriceOrder(Integer tag) {
+        //不需要排序
+        if(tag == null || tag == 0) {
+            return "1";
+        }else {
+            //价格由低到高
+            if(tag == 1) {
+                return " money_per_hour";
+            }else {
+                //价格由高到低
+                return " money_per_hour desc";
+            }
+        }
+    }
+
+    /**
+     * 为获得的停车场查询可用的车位数
+     * @param places
+     */
+    private void setAvailableSeat(List<ParkingPlace> places) {
         for(int i = 0; i < places.size(); i++) {
             ParkingPlace place = places.get(i);
             ParkingSeatExample seatExample = new ParkingSeatExample();
@@ -64,10 +113,6 @@ public class ParkingPlaceController {
             long availableSeat = parkingSeatService.countByExample(seatExample);
             place.setAvailableSeat(availableSeat);
         }
-        int row = places.size() % 3 == 0 ? places.size() / 3 : places.size() / 3 + 1;
-        map.put("places", places);
-        map.put("row", row);
-        return "/parkingplace/parkingplace_list";
     }
 
 }
