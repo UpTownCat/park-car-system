@@ -15,4 +15,9 @@ public class HelloWorldController {
     public String greeting() {
         return "hello";
     }
+
+    @RequestMapping(value = "/navbar", method = RequestMethod.GET)
+    public String showNavbar() {
+        return "nav";
+    }
 }

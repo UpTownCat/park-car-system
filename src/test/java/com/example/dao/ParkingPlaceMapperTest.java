@@ -37,11 +37,13 @@ public class ParkingPlaceMapperTest {
 
     @Test
     public void insert() throws Exception {
-        ParkingPlace place = new ParkingPlace();
-        place.setName("大学城停车场");
-        place.setLocation("西安未央大学城");
-        parkingPlaceMapper.insert(place);
-        logger.info("place = {}", place);
+        for (int i = 0; i < 30; i++) {
+            ParkingPlace place = new ParkingPlace();
+            place.setName("大学城停车场" + i);
+            place.setLocation("西安未央大学城" + i);
+            place.setMoneyPerHour(3 + i * 0.1);
+            parkingPlaceMapper.insert(place);
+        }
     }
 
     @Test

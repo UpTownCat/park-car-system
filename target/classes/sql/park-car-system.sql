@@ -30,11 +30,26 @@ CREATE TABLE parking_place(
 )engine=InnoDB, DEFAULT CHARSET=utf8, COMMENT "停车场数据表" ;
 
 CREATE TABLE parking_seat(
-  id INT AUTO_INCREMENT COMMENT "id" COMMENT "id",
+  id INT AUTO_INCREMENT COMMENT "id",
   parking_place_id INT NOT NULL COMMENT "停车场的id",
   car_id INT COMMENT "车的id",
   CONSTRAINT park_seat_id_pk PRIMARY KEY (id),
   CONSTRAINT parking_seat_parking_place_id_fk FOREIGN KEY (parking_place_id) REFERENCES parking_place(id),
   CONSTRAINT parking_seat_car_id_fk FOREIGN KEY (car_id) REFERENCES car(id)
 )engine=InnoDB, DEFAULT CHARSET=utf8, COMMENT "停车位数据表" ;
+
+CREATE TABLE parking(
+  id INT AUTO_INCREMENT COMMENT "id",
+  parking_seat_id INT NOT NULL COMMENT "停车位id",
+  car_id INT NOT NULL COMMENT "车id",
+  in_time TIMESTAMP DEFAULT 0 NOT NULL COMMENT "计时开始时间",
+  out_time TIMESTAMP DEFAULT 0 NOT NULL COMMENT "计时结束时间",
+  price DOUBLE NOT NULL COMMENT "停车花费",
+  CONSTRAINT parking_id_pk PRIMARY KEY (id),
+  CONSTRAINT parking_parking_seat_id_fk FOREIGN KEY (parking_seat_id) REFERENCES parking_seat(id),
+  CONSTRAINT parking_car_id_fk FOREIGN KEY (car_id) REFERENCES car(id)
+)engine=InnoDB, DEFAULT CHARSET=utf8, COMMENT "停车数据表";
+
+ALTER TABLE car_owner ADD balance DOUBLE NOT NULL DEFAULT 0 COMMENT "余额";
+ALTER TABLE parking_place ADD money_per_hour DOUBLE NOT NULL DEFAULT 2 COMMENT "停车场的每小时收费";
 

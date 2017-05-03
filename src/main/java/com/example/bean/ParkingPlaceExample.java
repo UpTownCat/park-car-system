@@ -304,63 +304,63 @@ public class ParkingPlaceExample {
             return (Criteria) this;
         }
 
-        public Criteria andMoney_per_hourIsNull() {
+        public Criteria andMoneyPerHourIsNull() {
             addCriterion("money_per_hour is null");
             return (Criteria) this;
         }
 
-        public Criteria andMoney_per_hourIsNotNull() {
+        public Criteria andMoneyPerHourIsNotNull() {
             addCriterion("money_per_hour is not null");
             return (Criteria) this;
         }
 
-        public Criteria andMoney_per_hourEqualTo(Double value) {
-            addCriterion("money_per_hour =", value, "money_per_hour");
+        public Criteria andMoneyPerHourEqualTo(Double value) {
+            addCriterion("money_per_hour =", value, "moneyPerHour");
             return (Criteria) this;
         }
 
-        public Criteria andMoney_per_hourNotEqualTo(Double value) {
-            addCriterion("money_per_hour <>", value, "money_per_hour");
+        public Criteria andMoneyPerHourNotEqualTo(Double value) {
+            addCriterion("money_per_hour <>", value, "moneyPerHour");
             return (Criteria) this;
         }
 
-        public Criteria andMoney_per_hourGreaterThan(Double value) {
-            addCriterion("money_per_hour >", value, "money_per_hour");
+        public Criteria andMoneyPerHourGreaterThan(Double value) {
+            addCriterion("money_per_hour >", value, "moneyPerHour");
             return (Criteria) this;
         }
 
-        public Criteria andMoney_per_hourGreaterThanOrEqualTo(Double value) {
-            addCriterion("money_per_hour >=", value, "money_per_hour");
+        public Criteria andMoneyPerHourGreaterThanOrEqualTo(Double value) {
+            addCriterion("money_per_hour >=", value, "moneyPerHour");
             return (Criteria) this;
         }
 
-        public Criteria andMoney_per_hourLessThan(Double value) {
-            addCriterion("money_per_hour <", value, "money_per_hour");
+        public Criteria andMoneyPerHourLessThan(Double value) {
+            addCriterion("money_per_hour <", value, "moneyPerHour");
             return (Criteria) this;
         }
 
-        public Criteria andMoney_per_hourLessThanOrEqualTo(Double value) {
-            addCriterion("money_per_hour <=", value, "money_per_hour");
+        public Criteria andMoneyPerHourLessThanOrEqualTo(Double value) {
+            addCriterion("money_per_hour <=", value, "moneyPerHour");
             return (Criteria) this;
         }
 
-        public Criteria andMoney_per_hourIn(List<Double> values) {
-            addCriterion("money_per_hour in", values, "money_per_hour");
+        public Criteria andMoneyPerHourIn(List<Double> values) {
+            addCriterion("money_per_hour in", values, "moneyPerHour");
             return (Criteria) this;
         }
 
-        public Criteria andMoney_per_hourNotIn(List<Double> values) {
-            addCriterion("money_per_hour not in", values, "money_per_hour");
+        public Criteria andMoneyPerHourNotIn(List<Double> values) {
+            addCriterion("money_per_hour not in", values, "moneyPerHour");
             return (Criteria) this;
         }
 
-        public Criteria andMoney_per_hourBetween(Double value1, Double value2) {
-            addCriterion("money_per_hour between", value1, value2, "money_per_hour");
+        public Criteria andMoneyPerHourBetween(Double value1, Double value2) {
+            addCriterion("money_per_hour between", value1, value2, "moneyPerHour");
             return (Criteria) this;
         }
 
-        public Criteria andMoney_per_hourNotBetween(Double value1, Double value2) {
-            addCriterion("money_per_hour not between", value1, value2, "money_per_hour");
+        public Criteria andMoneyPerHourNotBetween(Double value1, Double value2) {
+            addCriterion("money_per_hour not between", value1, value2, "moneyPerHour");
             return (Criteria) this;
         }
     }

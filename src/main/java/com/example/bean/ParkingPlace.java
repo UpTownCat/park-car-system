@@ -1,5 +1,7 @@
 package com.example.bean;
 
+import java.util.List;
+
 public class ParkingPlace {
     private Integer id;
 
@@ -7,7 +9,27 @@ public class ParkingPlace {
 
     private String location;
 
-    private Double money_per_hour;
+    private Double moneyPerHour;
+
+    private Long availableSeat;
+
+    private List<ParkingSeat> parkingSeats;
+
+    public List<ParkingSeat> getParkingSeats() {
+        return parkingSeats;
+    }
+
+    public void setParkingSeats(List<ParkingSeat> parkingSeats) {
+        this.parkingSeats = parkingSeats;
+    }
+
+    public Long getAvailableSeat() {
+        return availableSeat;
+    }
+
+    public void setAvailableSeat(Long availableSeat) {
+        this.availableSeat = availableSeat;
+    }
 
     public Integer getId() {
         return id;
@@ -33,11 +55,11 @@ public class ParkingPlace {
         this.location = location == null ? null : location.trim();
     }
 
-    public Double getMoney_per_hour() {
-        return money_per_hour;
+    public Double getMoneyPerHour() {
+        return moneyPerHour;
     }
 
-    public void setMoney_per_hour(Double money_per_hour) {
-        this.money_per_hour = money_per_hour;
+    public void setMoneyPerHour(Double moneyPerHour) {
+        this.moneyPerHour = moneyPerHour;
     }
 }

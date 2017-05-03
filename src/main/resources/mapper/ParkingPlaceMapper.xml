@@ -5,7 +5,7 @@
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="location" jdbcType="VARCHAR" property="location" />
-    <result column="money_per_hour" jdbcType="DOUBLE" property="money_per_hour" />
+    <result column="money_per_hour" jdbcType="DOUBLE" property="moneyPerHour" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -104,7 +104,7 @@
     </selectKey>
     insert into parking_place (name, location, money_per_hour
       )
-    values (#{name,jdbcType=VARCHAR}, #{location,jdbcType=VARCHAR}, #{money_per_hour,jdbcType=DOUBLE}
+    values (#{name,jdbcType=VARCHAR}, #{location,jdbcType=VARCHAR}, #{moneyPerHour,jdbcType=DOUBLE}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.example.bean.ParkingPlace">
@@ -119,7 +119,7 @@
       <if test="location != null">
         location,
       </if>
-      <if test="money_per_hour != null">
+      <if test="moneyPerHour != null">
         money_per_hour,
       </if>
     </trim>
@@ -130,8 +130,8 @@
       <if test="location != null">
         #{location,jdbcType=VARCHAR},
       </if>
-      <if test="money_per_hour != null">
-        #{money_per_hour,jdbcType=DOUBLE},
+      <if test="moneyPerHour != null">
+        #{moneyPerHour,jdbcType=DOUBLE},
       </if>
     </trim>
   </insert>
@@ -153,8 +153,8 @@
       <if test="record.location != null">
         location = #{record.location,jdbcType=VARCHAR},
       </if>
-      <if test="record.money_per_hour != null">
-        money_per_hour = #{record.money_per_hour,jdbcType=DOUBLE},
+      <if test="record.moneyPerHour != null">
+        money_per_hour = #{record.moneyPerHour,jdbcType=DOUBLE},
       </if>
     </set>
     <if test="_parameter != null">
@@ -166,7 +166,7 @@
     set id = #{record.id,jdbcType=INTEGER},
       name = #{record.name,jdbcType=VARCHAR},
       location = #{record.location,jdbcType=VARCHAR},
-      money_per_hour = #{record.money_per_hour,jdbcType=DOUBLE}
+      money_per_hour = #{record.moneyPerHour,jdbcType=DOUBLE}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -180,8 +180,8 @@
       <if test="location != null">
         location = #{location,jdbcType=VARCHAR},
       </if>
-      <if test="money_per_hour != null">
-        money_per_hour = #{money_per_hour,jdbcType=DOUBLE},
+      <if test="moneyPerHour != null">
+        money_per_hour = #{moneyPerHour,jdbcType=DOUBLE},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
@@ -190,7 +190,7 @@
     update parking_place
     set name = #{name,jdbcType=VARCHAR},
       location = #{location,jdbcType=VARCHAR},
-      money_per_hour = #{money_per_hour,jdbcType=DOUBLE}
+      money_per_hour = #{moneyPerHour,jdbcType=DOUBLE}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

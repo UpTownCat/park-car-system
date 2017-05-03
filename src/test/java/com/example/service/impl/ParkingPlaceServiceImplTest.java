@@ -26,7 +26,11 @@ public class ParkingPlaceServiceImplTest {
     private ParkingPlaceService parkingPlaceService;
     @Test
     public void insert() throws Exception {
-
+        ParkingPlace parkingPlace = new ParkingPlace();
+        parkingPlace.setName("芳村隧道口停车场");
+        parkingPlace.setLocation("芳村隧道口公交车站");
+        parkingPlace.setMoneyPerHour(3.2);
+        parkingPlaceService.insert(parkingPlace);
     }
 
     @Test
