@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.dao.ParkingMapper">
+  <resultMap id="BaseResultMap" type="com.example.bean.Parking">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="parking_seat_id" jdbcType="INTEGER" property="parkingSeatId" />
+    <result column="car_id" jdbcType="INTEGER" property="carId" />
+    <result column="in_time" jdbcType="TIMESTAMP" property="inTime" />
+    <result column="out_time" jdbcType="TIMESTAMP" property="outTime" />
+    <result column="price" jdbcType="DOUBLE" property="price" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, parking_seat_id, car_id, in_time, out_time, price
+  </sql>
+  <select id="selectByExample" parameterType="com.example.bean.ParkingExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from parking
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from parking
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from parking
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.example.bean.ParkingExample">
+    delete from parking
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.example.bean.Parking">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into parking (parking_seat_id, car_id, in_time, 
+      out_time, price)
+    values (#{parkingSeatId,jdbcType=INTEGER}, #{carId,jdbcType=INTEGER}, #{inTime,jdbcType=TIMESTAMP}, 
+      #{outTime,jdbcType=TIMESTAMP}, #{price,jdbcType=DOUBLE})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.bean.Parking">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into parking
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="parkingSeatId != null">
+        parking_seat_id,
+      </if>
+      <if test="carId != null">
+        car_id,
+      </if>
+      <if test="inTime != null">
+        in_time,
+      </if>
+      <if test="outTime != null">
+        out_time,
+      </if>
+      <if test="price != null">
+        price,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="parkingSeatId != null">
+        #{parkingSeatId,jdbcType=INTEGER},
+      </if>
+      <if test="carId != null">
+        #{carId,jdbcType=INTEGER},
+      </if>
+      <if test="inTime != null">
+        #{inTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="outTime != null">
+        #{outTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="price != null">
+        #{price,jdbcType=DOUBLE},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.example.bean.ParkingExample" resultType="java.lang.Long">
+    select count(*) from parking
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update parking
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.parkingSeatId != null">
+        parking_seat_id = #{record.parkingSeatId,jdbcType=INTEGER},
+      </if>
+      <if test="record.carId != null">
+        car_id = #{record.carId,jdbcType=INTEGER},
+      </if>
+      <if test="record.inTime != null">
+        in_time = #{record.inTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.outTime != null">
+        out_time = #{record.outTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.price != null">
+        price = #{record.price,jdbcType=DOUBLE},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update parking
+    set id = #{record.id,jdbcType=INTEGER},
+      parking_seat_id = #{record.parkingSeatId,jdbcType=INTEGER},
+      car_id = #{record.carId,jdbcType=INTEGER},
+      in_time = #{record.inTime,jdbcType=TIMESTAMP},
+      out_time = #{record.outTime,jdbcType=TIMESTAMP},
+      price = #{record.price,jdbcType=DOUBLE}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.bean.Parking">
+    update parking
+    <set>
+      <if test="parkingSeatId != null">
+        parking_seat_id = #{parkingSeatId,jdbcType=INTEGER},
+      </if>
+      <if test="carId != null">
+        car_id = #{carId,jdbcType=INTEGER},
+      </if>
+      <if test="inTime != null">
+        in_time = #{inTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="outTime != null">
+        out_time = #{outTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="price != null">
+        price = #{price,jdbcType=DOUBLE},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.bean.Parking">
+    update parking
+    set parking_seat_id = #{parkingSeatId,jdbcType=INTEGER},
+      car_id = #{carId,jdbcType=INTEGER},
+      in_time = #{inTime,jdbcType=TIMESTAMP},
+      out_time = #{outTime,jdbcType=TIMESTAMP},
+      price = #{price,jdbcType=DOUBLE}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
