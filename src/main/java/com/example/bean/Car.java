@@ -5,7 +5,7 @@ public class Car {
 
     private String number;
 
-    private String brank;
+    private String branch;
 
     private String photo;
 
@@ -27,12 +27,12 @@ public class Car {
         this.number = number == null ? null : number.trim();
     }
 
-    public String getBrank() {
-        return brank;
+    public String getBranch() {
+        return branch;
     }
 
-    public void setBrank(String brank) {
-        this.brank = brank == null ? null : brank.trim();
+    public void setBranch(String branch) {
+        this.branch = branch == null ? null : branch.trim();
     }
 
     public String getPhoto() {

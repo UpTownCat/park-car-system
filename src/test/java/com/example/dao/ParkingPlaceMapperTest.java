@@ -1,6 +1,7 @@
 package com.example.dao;
 
 import com.example.bean.ParkingPlace;
+import com.example.util.CommonUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -42,7 +43,7 @@ public class ParkingPlaceMapperTest {
             place.setName("大学城停车场" + i);
             place.setLocation("西安未央大学城" + i);
             place.setMoneyPerHour(3 + i * 0.1);
-            parkingPlaceMapper.insert(place);
+            System.out.println(CommonUtil.formatDouble(place.getMoneyPerHour()));
         }
     }
 

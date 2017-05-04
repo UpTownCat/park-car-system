@@ -12,6 +12,8 @@
 <link rel="stylesheet" href="${basePath}/resources/css/jquery-confirm.css">
 <script type="text/javascript" src="${basePath}/resources/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="${basePath}/resources/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="${basePath}/resources/js/ajaxfileupload.js"></script>
 <script type="text/javascript" src="${basePath}/resources/js/jquery-confirm.js"></script>
 <script type="text/javascript" src="${basePath}/resources/js/common.js"></script>
 <script type="text/javascript" src="${basePath}/resources/js/page.js"></script>
+<script type="text/javascript" src="${basePath}/resources/js/image.js"></script>

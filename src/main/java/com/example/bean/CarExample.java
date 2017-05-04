@@ -234,73 +234,73 @@ public class CarExample {
             return (Criteria) this;
         }
 
-        public Criteria andBrankIsNull() {
-            addCriterion("brank is null");
+        public Criteria andBranchIsNull() {
+            addCriterion("branch is null");
             return (Criteria) this;
         }
 
-        public Criteria andBrankIsNotNull() {
-            addCriterion("brank is not null");
+        public Criteria andBranchIsNotNull() {
+            addCriterion("branch is not null");
             return (Criteria) this;
         }
 
-        public Criteria andBrankEqualTo(String value) {
-            addCriterion("brank =", value, "brank");
+        public Criteria andBranchEqualTo(String value) {
+            addCriterion("branch =", value, "branch");
             return (Criteria) this;
         }
 
-        public Criteria andBrankNotEqualTo(String value) {
-            addCriterion("brank <>", value, "brank");
+        public Criteria andBranchNotEqualTo(String value) {
+            addCriterion("branch <>", value, "branch");
             return (Criteria) this;
         }
 
-        public Criteria andBrankGreaterThan(String value) {
-            addCriterion("brank >", value, "brank");
+        public Criteria andBranchGreaterThan(String value) {
+            addCriterion("branch >", value, "branch");
             return (Criteria) this;
         }
 
-        public Criteria andBrankGreaterThanOrEqualTo(String value) {
-            addCriterion("brank >=", value, "brank");
+        public Criteria andBranchGreaterThanOrEqualTo(String value) {
+            addCriterion("branch >=", value, "branch");
             return (Criteria) this;
         }
 
-        public Criteria andBrankLessThan(String value) {
-            addCriterion("brank <", value, "brank");
+        public Criteria andBranchLessThan(String value) {
+            addCriterion("branch <", value, "branch");
             return (Criteria) this;
         }
 
-        public Criteria andBrankLessThanOrEqualTo(String value) {
-            addCriterion("brank <=", value, "brank");
+        public Criteria andBranchLessThanOrEqualTo(String value) {
+            addCriterion("branch <=", value, "branch");
             return (Criteria) this;
         }
 
-        public Criteria andBrankLike(String value) {
-            addCriterion("brank like", value, "brank");
+        public Criteria andBranchLike(String value) {
+            addCriterion("branch like", value, "branch");
             return (Criteria) this;
         }
 
-        public Criteria andBrankNotLike(String value) {
-            addCriterion("brank not like", value, "brank");
+        public Criteria andBranchNotLike(String value) {
+            addCriterion("branch not like", value, "branch");
             return (Criteria) this;
         }
 
-        public Criteria andBrankIn(List<String> values) {
-            addCriterion("brank in", values, "brank");
+        public Criteria andBranchIn(List<String> values) {
+            addCriterion("branch in", values, "branch");
             return (Criteria) this;
         }
 
-        public Criteria andBrankNotIn(List<String> values) {
-            addCriterion("brank not in", values, "brank");
+        public Criteria andBranchNotIn(List<String> values) {
+            addCriterion("branch not in", values, "branch");
             return (Criteria) this;
         }
 
-        public Criteria andBrankBetween(String value1, String value2) {
-            addCriterion("brank between", value1, value2, "brank");
+        public Criteria andBranchBetween(String value1, String value2) {
+            addCriterion("branch between", value1, value2, "branch");
             return (Criteria) this;
         }
 
-        public Criteria andBrankNotBetween(String value1, String value2) {
-            addCriterion("brank not between", value1, value2, "brank");
+        public Criteria andBranchNotBetween(String value1, String value2) {
+            addCriterion("branch not between", value1, value2, "branch");
             return (Criteria) this;
         }
 

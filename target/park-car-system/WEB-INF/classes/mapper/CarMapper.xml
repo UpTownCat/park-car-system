@@ -4,7 +4,7 @@
   <resultMap id="BaseResultMap" type="com.example.bean.Car">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="number" jdbcType="VARCHAR" property="number" />
-    <result column="brank" jdbcType="VARCHAR" property="brank" />
+    <result column="branch" jdbcType="VARCHAR" property="branch" />
     <result column="photo" jdbcType="VARCHAR" property="photo" />
     <result column="car_owner_id" jdbcType="INTEGER" property="carOwnerId" />
   </resultMap>
@@ -67,7 +67,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, number, brank, photo, car_owner_id
+    id, number, branch, photo, car_owner_id
   </sql>
   <select id="selectByExample" parameterType="com.example.bean.CarExample" resultMap="BaseResultMap">
     select
@@ -103,9 +103,9 @@
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
       SELECT LAST_INSERT_ID()
     </selectKey>
-    insert into car (number, brank, photo, 
+    insert into car (number, branch, photo, 
       car_owner_id)
-    values (#{number,jdbcType=VARCHAR}, #{brank,jdbcType=VARCHAR}, #{photo,jdbcType=VARCHAR}, 
+    values (#{number,jdbcType=VARCHAR}, #{branch,jdbcType=VARCHAR}, #{photo,jdbcType=VARCHAR}, 
       #{carOwnerId,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.example.bean.Car">
@@ -117,8 +117,8 @@
       <if test="number != null">
         number,
       </if>
-      <if test="brank != null">
-        brank,
+      <if test="branch != null">
+        branch,
       </if>
       <if test="photo != null">
         photo,
@@ -131,8 +131,8 @@
       <if test="number != null">
         #{number,jdbcType=VARCHAR},
       </if>
-      <if test="brank != null">
-        #{brank,jdbcType=VARCHAR},
+      <if test="branch != null">
+        #{branch,jdbcType=VARCHAR},
       </if>
       <if test="photo != null">
         #{photo,jdbcType=VARCHAR},
@@ -157,8 +157,8 @@
       <if test="record.number != null">
         number = #{record.number,jdbcType=VARCHAR},
       </if>
-      <if test="record.brank != null">
-        brank = #{record.brank,jdbcType=VARCHAR},
+      <if test="record.branch != null">
+        branch = #{record.branch,jdbcType=VARCHAR},
       </if>
       <if test="record.photo != null">
         photo = #{record.photo,jdbcType=VARCHAR},
@@ -175,7 +175,7 @@
     update car
     set id = #{record.id,jdbcType=INTEGER},
       number = #{record.number,jdbcType=VARCHAR},
-      brank = #{record.brank,jdbcType=VARCHAR},
+      branch = #{record.branch,jdbcType=VARCHAR},
       photo = #{record.photo,jdbcType=VARCHAR},
       car_owner_id = #{record.carOwnerId,jdbcType=INTEGER}
     <if test="_parameter != null">
@@ -188,8 +188,8 @@
       <if test="number != null">
         number = #{number,jdbcType=VARCHAR},
       </if>
-      <if test="brank != null">
-        brank = #{brank,jdbcType=VARCHAR},
+      <if test="branch != null">
+        branch = #{branch,jdbcType=VARCHAR},
       </if>
       <if test="photo != null">
         photo = #{photo,jdbcType=VARCHAR},
@@ -203,9 +203,10 @@
   <update id="updateByPrimaryKey" parameterType="com.example.bean.Car">
     update car
     set number = #{number,jdbcType=VARCHAR},
-      brank = #{brank,jdbcType=VARCHAR},
+      branch = #{branch,jdbcType=VARCHAR},
       photo = #{photo,jdbcType=VARCHAR},
       car_owner_id = #{carOwnerId,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
 </mapper>
