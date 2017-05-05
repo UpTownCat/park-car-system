@@ -66,12 +66,20 @@ public class CarController {
     }
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
-    public String listCars(Integer ownerId, Map<String, Object> map) {
+    public String listCars(Integer ownerId, Integer index, Map<String, Object> map) {
+        if(index == null || index < 1) {
+            index = 1;
+        }
         CarExample example = new CarExample();
         CarExample.Criteria criteria = example.createCriteria();
         criteria.andCarOwnerIdEqualTo(ownerId);
+        example.setOrderByClause(" 1 " + CommonUtil.getPageSql(index, 2));
         List<Car> cars = carService.selectByExample(example);
+        long count = carService.countByExample(example);
         map.put("cars", cars);
+        map.put("ownerId", ownerId);
+        map.put("index", index);
+        map.put("total", CommonUtil.getTotal(count, 2));
         return "car/car_list";
     }
 

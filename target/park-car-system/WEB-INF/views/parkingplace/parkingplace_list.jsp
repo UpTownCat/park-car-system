@@ -22,16 +22,11 @@
     </style>
     <script type="text/javascript">
         $(function () {
-            var placeIndex = "${index }";
-            var placeTotal = "${total}";
-            page.init(6, placeIndex, placeTotal, "");
-            $(".pageItem").click(function () {
-                var href = this.href;
-                var index = href.substring(href.lastIndexOf("=") + 1, href.length);
-                $("input[name=index]").val(index);
-                $("#place_form").submit();
-                return false;
-            })
+            var index = "${index }";
+            var total = "${total}";
+            var basePath = "${basePath}";
+            page.init(6, index, total, "");
+            page.forward(basePath + "/place/list", "#place_list_form", total);
         })
     </script>
 </head>
@@ -42,7 +37,7 @@
         <div class="panel panel-success">
             <div class="panel-heading">
                 <h4>停车场列表</h4>
-                <form class="navbar-form navbar-right" style="margin-top: -37px" id="place_form">
+                <form class="navbar-form navbar-right" style="margin-top: -37px" id="place_list_form">
                     <input type="hidden" name="index" value="${index }">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="停车场" name="name" value="${name }">

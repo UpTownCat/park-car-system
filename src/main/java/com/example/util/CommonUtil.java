@@ -117,4 +117,30 @@ public final class CommonUtil {
             return prop.getProperty(key);
         }
     }
+
+    /**
+     * 获取指定size的总页数
+     * @param total
+     * @param size
+     * @return
+     */
+    public static final long getTotal(long total, int size) {
+        if ( total < size) {
+            return 1;
+        }
+        return total % size == 0 ? total / size : total / size + 1;
+    }
+
+    /**
+     * 获取指定size的总行数
+     * @param total
+     * @param size
+     * @return
+     */
+    public static final int getRow(int total, int size) {
+//        if(total < size){
+//            return 0;
+//        }
+        return total / size;
+    }
 }

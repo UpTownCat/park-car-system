@@ -1,36 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="43c1b5c9-0bce-49ef-a344-ee9a7c2f3273" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/example/util/CommonUtil.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/park-car-system/WEB-INF/classes/com/example/util/CommonUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/example/bean/Car.class" afterPath="$PROJECT_DIR$/target/classes/com/example/bean/Car.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/example/bean/CarExample$Criteria.class" afterPath="$PROJECT_DIR$/target/classes/com/example/bean/CarExample$Criteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/example/bean/CarExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/target/classes/com/example/bean/CarExample$GeneratedCriteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/example/controller/HelloWorldController.class" afterPath="$PROJECT_DIR$/target/classes/com/example/controller/HelloWorldController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/park-car-system/WEB-INF/classes/com/example/bean/Car.class" afterPath="$PROJECT_DIR$/target/park-car-system/WEB-INF/classes/com/example/bean/Car.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/park-car-system/WEB-INF/classes/com/example/bean/CarExample$Criteria.class" afterPath="$PROJECT_DIR$/target/park-car-system/WEB-INF/classes/com/example/bean/CarExample$Criteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/park-car-system/WEB-INF/classes/com/example/bean/CarExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/target/park-car-system/WEB-INF/classes/com/example/bean/CarExample$GeneratedCriteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/park-car-system/WEB-INF/classes/com/example/controller/HelloWorldController.class" afterPath="$PROJECT_DIR$/target/park-car-system/WEB-INF/classes/com/example/controller/HelloWorldController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/example/dao/ParkingPlaceMapperTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/example/dao/ParkingPlaceMapperTest.class" />
+    <list default="true" id="43c1b5c9-0bce-49ef-a344-ee9a7c2f3273" name="Default" comment="完善停车场的条件查询">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/bean/Car.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/bean/Car.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/bean/CarExample.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/bean/CarExample.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/HelloWorldController.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/HelloWorldController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/CarController.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/CarController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/ParkingPlaceController.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/ParkingPlaceController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/ParkingSeatController.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/ParkingSeatController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/util/CommonUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/util/CommonUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config.properties" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/CarMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CarMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/base.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/base.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/nav.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/nav.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/example/dao/ParkingPlaceMapperTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/example/dao/ParkingPlaceMapperTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config.properties" afterPath="$PROJECT_DIR$/target/classes/config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/CarMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/CarMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/park-car-system/WEB-INF/classes/config.properties" afterPath="$PROJECT_DIR$/target/park-car-system/WEB-INF/classes/config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/park-car-system/WEB-INF/classes/mapper/CarMapper.xml" afterPath="$PROJECT_DIR$/target/park-car-system/WEB-INF/classes/mapper/CarMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/park-car-system/WEB-INF/views/base.jsp" afterPath="$PROJECT_DIR$/target/park-car-system/WEB-INF/views/base.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/park-car-system/WEB-INF/views/nav.jsp" afterPath="$PROJECT_DIR$/target/park-car-system/WEB-INF/views/nav.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/park-car-system/index.jsp" afterPath="$PROJECT_DIR$/target/park-car-system/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/car/car_list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/car/car_list.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/parkingplace/parkingplace_list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/parkingplace/parkingplace_list.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/parkingseat/parkingseat_list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/parkingseat/parkingseat_list.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/page.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/page.js" />
     </list>
     <ignored path="park-car-system.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,12 +40,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="436">
-      <file leaf-file-name="nav.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/nav.jsp">
+      <file leaf-file-name="car_list.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/car/car_list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="42" column="50" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />
+            <state relative-caret-position="207">
+              <caret line="18" column="74" selection-start-line="18" selection-start-column="74" selection-end-line="18" selection-end-column="74" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="place.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/place.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/page.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="68" column="43" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
+              <folding>
+                <marker date="1494000773652" expanded="true" signature="1796:1821" placeholder="..." />
+                <marker date="1494000773652" expanded="true" signature="1882:1898" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -73,8 +76,8 @@
       <file leaf-file-name="CarController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/controller/CarController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+            <state relative-caret-position="340">
+              <caret line="82" column="30" selection-start-line="82" selection-start-column="30" selection-end-line="82" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -82,11 +85,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="car_list.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/car/car_list.jsp">
+      <file leaf-file-name="CommonUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/util/CommonUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1019">
-              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+            <state relative-caret-position="425">
+              <caret line="134" column="19" selection-start-line="134" selection-start-column="19" selection-end-line="134" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parkingplace_list.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/parkingplace/parkingplace_list.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="326">
+              <caret line="66" column="18" selection-start-line="66" selection-start-column="18" selection-end-line="66" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parkingseat_list.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/parkingseat/parkingseat_list.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParkingSeatController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/controller/ParkingSeatController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1035">
+              <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -143,13 +176,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/bean/ParkingPlace.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/example/dao/ParkingSeatMapperTest.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/controller/ParkingSeatController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/controller/CarOwnerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/controller/ParkingController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/page.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/parkingseat/parkingseat_list.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/parkingplace/parkingplace_list.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/controller/ParkingPlaceController.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/example/dao/ParkingPlaceMapperTest.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/image.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/base.jsp" />
@@ -159,11 +187,16 @@
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/controller/HelloWorldController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/car.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/controller/CarController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/util/CommonUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/controller/CommonController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/car/car_list.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/nav.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/controller/CarController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/car/car_list.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/page.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/parkingplace/parkingplace_list.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/util/CommonUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/controller/ParkingPlaceController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/parkingseat/parkingseat_list.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/controller/ParkingSeatController.java" />
       </list>
     </option>
   </component>
@@ -225,6 +258,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -332,6 +367,74 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="park-car-system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="park-car-system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parkingplace" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="park-car-system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="park-car-system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="car" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -467,9 +570,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -483,7 +584,7 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="SearchEverywhereHistoryKey" value="comm&#9;FILE&#9;file://E:/test/park-car-system/src/main/java/com/example/util/CommonUtil.java&#10;carcon&#9;FILE&#9;file://E:/test/park-car-system/src/main/java/com/example/controller/CarController.java&#10;hell&#9;FILE&#9;file://E:/test/park-car-system/src/main/java/com/example/controller/HelloWorldController.java&#10;index&#9;FILE&#9;file://E:/test/park-car-system/src/main/webapp/index.jsp&#10;parking&#9;FILE&#9;file://E:/test/park-car-system/src/test/java/com/example/dao/ParkingPlaceMapperTest.java&#10;park&#9;FILE&#9;file://E:/test/park-car-system/src/main/java/com/example/controller/ParkingPlaceController.java&#10;parkingseat_l&#9;FILE&#9;file://E:/test/park-car-system/src/main/webapp/WEB-INF/views/parkingseat/parkingseat_list.jsp&#10;par&#9;FILE&#9;file://E:/test/park-car-system/src/main/java/com/example/controller/ParkingPlaceController.java&#10;web.x&#9;FILE&#9;file://E:/test/park-car-system/src/main/webapp/WEB-INF/web.xml&#10;parkingplace.java&#9;FILE&#9;file://E:/test/park-car-system/src/main/java/com/example/bean/ParkingPlace.java&#10;parkingp&#9;FILE&#9;file://E:/test/park-car-system/src/main/java/com/example/controller/ParkingPlaceController.java&#10;nav&#9;FILE&#9;file://E:/test/park-car-system/src/main/webapp/WEB-INF/views/nav.jsp&#10;carownerma&#9;FILE&#9;file://E:/test/park-car-system/src/main/java/com/example/dao/CarOwnerMapper.java&#10;caro&#9;FILE&#9;file://E:/test/park-car-system/src/test/java/com/example/dao/CarOwnerMapperTest.java&#10;park-&#9;FILE&#9;file://E:/test/park-car-system/src/main/resources/sql/park-car-system.sql&#10;park_&#9;FILE&#9;file://E:/test/park-car-system/.idea/artifacts/park_car_system_war.xml" />
+    <property name="SearchEverywhereHistoryKey" value="Comm&#9;ACTION&#9;CheckinProject&#10;carcon&#9;FILE&#9;file://E:/test/park-car-system/src/main/java/com/example/controller/CarController.java&#10;comm&#9;FILE&#9;file://E:/test/park-car-system/src/main/java/com/example/util/CommonUtil.java&#10;hell&#9;FILE&#9;file://E:/test/park-car-system/src/main/java/com/example/controller/HelloWorldController.java&#10;index&#9;FILE&#9;file://E:/test/park-car-system/src/main/webapp/index.jsp&#10;parking&#9;FILE&#9;file://E:/test/park-car-system/src/test/java/com/example/dao/ParkingPlaceMapperTest.java&#10;park&#9;FILE&#9;file://E:/test/park-car-system/src/main/java/com/example/controller/ParkingPlaceController.java&#10;parkingseat_l&#9;FILE&#9;file://E:/test/park-car-system/src/main/webapp/WEB-INF/views/parkingseat/parkingseat_list.jsp&#10;par&#9;FILE&#9;file://E:/test/park-car-system/src/main/java/com/example/controller/ParkingPlaceController.java&#10;web.x&#9;FILE&#9;file://E:/test/park-car-system/src/main/webapp/WEB-INF/web.xml&#10;parkingplace.java&#9;FILE&#9;file://E:/test/park-car-system/src/main/java/com/example/bean/ParkingPlace.java&#10;parkingp&#9;FILE&#9;file://E:/test/park-car-system/src/main/java/com/example/controller/ParkingPlaceController.java&#10;nav&#9;FILE&#9;file://E:/test/park-car-system/src/main/webapp/WEB-INF/views/nav.jsp&#10;carownerma&#9;FILE&#9;file://E:/test/park-car-system/src/main/java/com/example/dao/CarOwnerMapper.java&#10;caro&#9;FILE&#9;file://E:/test/park-car-system/src/test/java/com/example/dao/CarOwnerMapperTest.java&#10;park-&#9;FILE&#9;file://E:/test/park-car-system/src/main/resources/sql/park-car-system.sql&#10;park_&#9;FILE&#9;file://E:/test/park-car-system/.idea/artifacts/park_car_system_war.xml" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
   <component name="RecentsManager">
@@ -1219,6 +1320,8 @@
       <workItem from="1493809102810" duration="9261000" />
       <workItem from="1493825767397" duration="3100000" />
       <workItem from="1493884549433" duration="22144000" />
+      <workItem from="1493912882110" duration="19000" />
+      <workItem from="1493994071115" duration="6656000" />
     </task>
     <task id="LOCAL-00001" summary="完善停车场的条件查询">
       <created>1493828755069</created>
@@ -1263,7 +1366,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65892000" />
+    <option name="totallyTimeSpent" value="72567000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -1288,7 +1391,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.4908953" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32852808" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22039473" sideWeight="0.4848255" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2236842" sideWeight="0.4848255" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1331,14 +1434,14 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.4939302" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26973686" sideWeight="0.4969651" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27631578" sideWeight="0.4969651" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.4939302" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39473686" sideWeight="0.4848255" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7121711" sideWeight="0.4848255" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19499241" sideWeight="0.42819843" order="0" side_tool="false" content_ui="combo" />
@@ -1504,15 +1607,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
           <caret line="235" column="40" selection-start-line="235" selection-start-column="40" selection-end-line="235" selection-end-column="40" />
-          <folding>
-            <marker date="1493788510276" expanded="true" signature="3641:3746" placeholder="select from car_owner" />
-            <marker date="1493788510276" expanded="true" signature="3832:3891" placeholder="delete from " />
-            <marker date="1493788510276" expanded="true" signature="3989:4010" placeholder="delete from " />
-            <marker date="1493788510276" expanded="true" signature="5930:5960" placeholder="select count... car_owner" />
-            <marker date="1493788510276" expanded="true" signature="7050:7406" placeholder="update car_o... " />
-            <marker date="1493788510276" expanded="true" signature="7611:8222" placeholder="update car_o... " />
-            <marker date="1493788510276" expanded="true" signature="8316:8626" placeholder="update car_o... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1520,15 +1614,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
           <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-          <folding>
-            <marker date="1493788382778" expanded="true" signature="3454:3563" placeholder="select from parking_place" />
-            <marker date="1493788382778" expanded="true" signature="3649:3712" placeholder="delete from " />
-            <marker date="1493788382778" expanded="true" signature="3814:3839" placeholder="delete from " />
-            <marker date="1493788382778" expanded="true" signature="5277:5311" placeholder="select count... parking_place" />
-            <marker date="1493788382778" expanded="true" signature="6116:6342" placeholder="update parki... " />
-            <marker date="1493788382778" expanded="true" signature="6551:6919" placeholder="update parki... " />
-            <marker date="1493788382778" expanded="true" signature="7017:7218" placeholder="update parki... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1551,15 +1636,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
           <caret line="208" column="31" selection-start-line="208" selection-start-column="31" selection-end-line="208" selection-end-column="31" />
-          <folding>
-            <marker date="1493786940288" expanded="true" signature="3595:3698" placeholder="select from parking" />
-            <marker date="1493786940288" expanded="true" signature="3784:3841" placeholder="delete from " />
-            <marker date="1493786940288" expanded="true" signature="3938:3957" placeholder="delete from " />
-            <marker date="1493786940288" expanded="true" signature="5738:5766" placeholder="select count... parking" />
-            <marker date="1493786940288" expanded="true" signature="6780:7107" placeholder="update parki... " />
-            <marker date="1493786940288" expanded="true" signature="7311:7860" placeholder="update parki... " />
-            <marker date="1493786940288" expanded="true" signature="7953:8241" placeholder="update parki... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1585,18 +1661,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/controller/ParkingSeatController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/example/dao/ParkingSeatMapperTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1607,40 +1675,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/parkingseat/parkingseat_list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="46" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
-          <folding>
-            <marker date="1493818809357" expanded="true" signature="1796:1821" placeholder="..." />
-            <marker date="1493818809357" expanded="true" signature="1882:1898" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/15cbc277-9e3f-4e84-9dd0-ef2f76028411/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/controller/ParkingPlaceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1217">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1656,7 +1694,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1664,7 +1701,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1672,7 +1708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1680,31 +1715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-          <folding>
-            <marker date="1493902270239" expanded="true" signature="3485:3584" placeholder="select from car" />
-            <marker date="1493902270239" expanded="true" signature="3670:3723" placeholder="delete from " />
-            <marker date="1493902270239" expanded="true" signature="3816:3831" placeholder="delete from " />
-            <marker date="1493902270239" expanded="true" signature="5384:5408" placeholder="select count... car" />
-            <marker date="1493902270239" expanded="true" signature="6299:6560" placeholder="update car s... " />
-            <marker date="1493902270239" expanded="true" signature="6760:7200" placeholder="update car n... " />
-            <marker date="1493902270239" expanded="true" signature="7289:7518" placeholder="update car s... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/parkingplace/parkingplace_list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/place.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1712,7 +1722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
           <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1724,21 +1733,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/util/CommonUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1011">
-          <caret line="83" column="17" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/ajaxfileupload.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4883">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1754,9 +1752,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
           <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1768,28 +1763,87 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/nav.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1219">
+          <caret line="53" column="69" selection-start-line="53" selection-start-column="69" selection-end-line="53" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/controller/CarController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+        <state relative-caret-position="340">
+          <caret line="82" column="30" selection-start-line="82" selection-start-column="30" selection-end-line="82" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/car/car_list.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/place.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1019">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state relative-caret-position="324">
+          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/nav.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/car/car_list.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="42" column="50" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />
+        <state relative-caret-position="207">
+          <caret line="18" column="74" selection-start-line="18" selection-start-column="74" selection-end-line="18" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="68" column="43" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
+          <folding>
+            <marker date="1494000773652" expanded="true" signature="1796:1821" placeholder="..." />
+            <marker date="1494000773652" expanded="true" signature="1882:1898" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/util/CommonUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="134" column="19" selection-start-line="134" selection-start-column="19" selection-end-line="134" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/controller/ParkingPlaceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="78" column="38" selection-start-line="78" selection-start-column="38" selection-end-line="78" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/controller/ParkingSeatController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/parkingseat/parkingseat_list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/parkingplace/parkingplace_list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="66" column="18" selection-start-line="66" selection-start-column="18" selection-end-line="66" selection-end-column="18" />
           <folding />
         </state>
       </provider>

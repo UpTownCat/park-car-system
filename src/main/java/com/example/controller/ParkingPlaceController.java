@@ -66,16 +66,16 @@ public class ParkingPlaceController {
         List<ParkingPlace> places = parkingPlaceService.selectByExample(example);
         setAvailableSeat(places);
         //计算一共有多少行
-        int row = places.size() % 3 == 0 ? places.size() / 3 : places.size() / 3 + 1;
+//        int row = places.size() % 3 == 0 ? places.size() / 3 : places.size() / 3 + 1;
+        int row = CommonUtil.getRow(places.size(), 3);
         //获取和计算记录总数
-        long total = parkingPlaceService.countByExample(example);
-        total = total % 9 == 0 ? total / 9 + 1 : total / 9 + 2;
+        long count = parkingPlaceService.countByExample(example);
         map.put("places", places);
         map.put("row", row);
         map.put("index", index);
         map.put("order", tag);
         map.put("name", name);
-        map.put("total", total);
+        map.put("total", CommonUtil.getTotal(count, 9));
         return "/parkingplace/parkingplace_list";
     }
 

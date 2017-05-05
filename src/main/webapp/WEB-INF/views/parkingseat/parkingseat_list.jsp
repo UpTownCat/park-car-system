@@ -23,7 +23,11 @@
     </style>
     <script type="text/javascript">
         $(function () {
-            page.init(6, 1, 10, "");
+            var index = "${index}";
+            var total = "${total}";
+            var basePath = "${basePath}";
+            page.init(6, index, total, "");
+            page.forward(basePath + "/parkingseat/list", "#seat_list_form", total);
         })
     </script>
 </head>
@@ -33,7 +37,9 @@
         <div class="panel panel-success">
             <div class="panel-heading">
                 <h4>停车位列表</h4>
-                <form class="navbar-form navbar-right" style="margin-top: -37px">
+                <form class="navbar-form navbar-right" style="margin-top: -37px" id="seat_list_form">
+                    <input type="hidden" name="placeId" value="${placeId}">
+                    <input type="hidden" name="index">
                     <div class="form-group">
                         <label>筛选:</label>
                         <select class="form-control">

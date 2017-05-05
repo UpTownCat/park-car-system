@@ -54,18 +54,33 @@ var page = {
             }
         }
     },
-    forward : function(total, url) {
-        var toPage = $("#forwardPage").val();
-        if(toPage.length == 0){
+    forward: function (url, formId, total) {
+        $(".pageItem").click(function () {
+            var href = this.href;
+            var index = href.substring(href.lastIndexOf("=") + 1);
+            $("input[name=index]").val(index);
+            $(formId).attr("href", url).submit();
+            return false;
+        })
+
+        $("#forward").click(function () {
+            var index = $("#forwardPage").val();
+            if(index.length == 0) {
+                common.remind("跳转的页面不能为空！")
+                return ;
+            }
+            var reg= /^[0-9]*[1-9][0-9]*$/;
+            if(!reg.test(index)) {
+                common.remind("输入只能为正整数！");
+                return ;
+            }
+            if(index > total) {
+                common.remind("输入的页数大于总页数！")
+                return ;
+            }
+            $("input[name=index]").val(index);
+            $(formId).attr("href", url).submit();
             return ;
-        }
-        if(toPage - 0 > total) {
-            toPage = total;
-        }
-        if(toPage - 0 < 1){
-            toPage = 1;
-        }
-        var forward = $("#forward");
-        forward.attr("href", url + "?index=" + toPage);
-    },
+        })
+    }
 }
