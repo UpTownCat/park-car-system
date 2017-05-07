@@ -83,6 +83,15 @@ public class CarController {
         return "car/car_list";
     }
 
+    @RequestMapping(value = "/json/list", method = RequestMethod.GET)
+    @ResponseBody
+    public List<Car> listCarsJson(Integer ownerId) {
+        CarExample example = new CarExample();
+        CarExample.Criteria criteria = example.createCriteria();
+        criteria.andCarOwnerIdEqualTo(ownerId);
+        return carService.selectByExample(example);
+    }
+
     /**
      * 测试
      * @return

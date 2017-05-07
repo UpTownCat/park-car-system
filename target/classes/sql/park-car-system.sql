@@ -53,3 +53,6 @@ CREATE TABLE parking(
 ALTER TABLE car_owner ADD balance DOUBLE NOT NULL DEFAULT 0 COMMENT "余额";
 ALTER TABLE parking_place ADD money_per_hour DOUBLE NOT NULL DEFAULT 2 COMMENT "停车场的每小时收费";
 
+ALTER TABLE parking ADD car_owner_id INT ;
+ALTER TABLE parking ADD CONSTRAINT parking_car_owner_id_fk FOREIGN KEY (car_owner_id) REFERENCES car_owner(id);
+

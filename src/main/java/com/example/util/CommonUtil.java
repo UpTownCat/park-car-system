@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
+import java.util.Date;
 import java.util.Properties;
 import java.util.Random;
 
@@ -142,5 +143,21 @@ public final class CommonUtil {
 //            return 0;
 //        }
         return total / size;
+    }
+
+    /**
+     * 计算停车的费用
+     * @param inTime
+     * @param outTime
+     * @param moneyPerHour
+     * @return
+     */
+    public static final double countMoneyOfParking(Date inTime, Date outTime, double moneyPerHour) {
+        long millions = outTime.getTime() - inTime.getTime();
+        long hour = 1000 * 60 * 60;
+        if(millions < hour) {
+            return moneyPerHour;
+        }
+        return (millions % hour == 0 ? millions / hour : millions / hour + 1) * moneyPerHour;
     }
 }

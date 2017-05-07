@@ -8,6 +8,7 @@
     <result column="in_time" jdbcType="TIMESTAMP" property="inTime" />
     <result column="out_time" jdbcType="TIMESTAMP" property="outTime" />
     <result column="price" jdbcType="DOUBLE" property="price" />
+    <result column="car_owner_id" jdbcType="INTEGER" property="carOwnerId" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -68,7 +69,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, parking_seat_id, car_id, in_time, out_time, price
+    id, parking_seat_id, car_id, in_time, out_time, price, car_owner_id
   </sql>
   <select id="selectByExample" parameterType="com.example.bean.ParkingExample" resultMap="BaseResultMap">
     select
@@ -105,9 +106,11 @@
       SELECT LAST_INSERT_ID()
     </selectKey>
     insert into parking (parking_seat_id, car_id, in_time, 
-      out_time, price)
+      out_time, price, car_owner_id
+      )
     values (#{parkingSeatId,jdbcType=INTEGER}, #{carId,jdbcType=INTEGER}, #{inTime,jdbcType=TIMESTAMP}, 
-      #{outTime,jdbcType=TIMESTAMP}, #{price,jdbcType=DOUBLE})
+      #{outTime,jdbcType=TIMESTAMP}, #{price,jdbcType=DOUBLE}, #{carOwnerId,jdbcType=INTEGER}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.example.bean.Parking">
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
@@ -130,6 +133,9 @@
       <if test="price != null">
         price,
       </if>
+      <if test="carOwnerId != null">
+        car_owner_id,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="parkingSeatId != null">
@@ -146,6 +152,9 @@
       </if>
       <if test="price != null">
         #{price,jdbcType=DOUBLE},
+      </if>
+      <if test="carOwnerId != null">
+        #{carOwnerId,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -176,6 +185,9 @@
       <if test="record.price != null">
         price = #{record.price,jdbcType=DOUBLE},
       </if>
+      <if test="record.carOwnerId != null">
+        car_owner_id = #{record.carOwnerId,jdbcType=INTEGER},
+      </if>
     </set>
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -188,7 +200,8 @@
       car_id = #{record.carId,jdbcType=INTEGER},
       in_time = #{record.inTime,jdbcType=TIMESTAMP},
       out_time = #{record.outTime,jdbcType=TIMESTAMP},
-      price = #{record.price,jdbcType=DOUBLE}
+      price = #{record.price,jdbcType=DOUBLE},
+      car_owner_id = #{record.carOwnerId,jdbcType=INTEGER}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -211,6 +224,9 @@
       <if test="price != null">
         price = #{price,jdbcType=DOUBLE},
       </if>
+      <if test="carOwnerId != null">
+        car_owner_id = #{carOwnerId,jdbcType=INTEGER},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
@@ -220,7 +236,8 @@
       car_id = #{carId,jdbcType=INTEGER},
       in_time = #{inTime,jdbcType=TIMESTAMP},
       out_time = #{outTime,jdbcType=TIMESTAMP},
-      price = #{price,jdbcType=DOUBLE}
+      price = #{price,jdbcType=DOUBLE},
+      car_owner_id = #{carOwnerId,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

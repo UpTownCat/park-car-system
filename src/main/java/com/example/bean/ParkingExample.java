@@ -464,6 +464,66 @@ public class ParkingExample {
             addCriterion("price not between", value1, value2, "price");
             return (Criteria) this;
         }
+
+        public Criteria andCarOwnerIdIsNull() {
+            addCriterion("car_owner_id is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCarOwnerIdIsNotNull() {
+            addCriterion("car_owner_id is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCarOwnerIdEqualTo(Integer value) {
+            addCriterion("car_owner_id =", value, "carOwnerId");
+            return (Criteria) this;
+        }
+
+        public Criteria andCarOwnerIdNotEqualTo(Integer value) {
+            addCriterion("car_owner_id <>", value, "carOwnerId");
+            return (Criteria) this;
+        }
+
+        public Criteria andCarOwnerIdGreaterThan(Integer value) {
+            addCriterion("car_owner_id >", value, "carOwnerId");
+            return (Criteria) this;
+        }
+
+        public Criteria andCarOwnerIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("car_owner_id >=", value, "carOwnerId");
+            return (Criteria) this;
+        }
+
+        public Criteria andCarOwnerIdLessThan(Integer value) {
+            addCriterion("car_owner_id <", value, "carOwnerId");
+            return (Criteria) this;
+        }
+
+        public Criteria andCarOwnerIdLessThanOrEqualTo(Integer value) {
+            addCriterion("car_owner_id <=", value, "carOwnerId");
+            return (Criteria) this;
+        }
+
+        public Criteria andCarOwnerIdIn(List<Integer> values) {
+            addCriterion("car_owner_id in", values, "carOwnerId");
+            return (Criteria) this;
+        }
+
+        public Criteria andCarOwnerIdNotIn(List<Integer> values) {
+            addCriterion("car_owner_id not in", values, "carOwnerId");
+            return (Criteria) this;
+        }
+
+        public Criteria andCarOwnerIdBetween(Integer value1, Integer value2) {
+            addCriterion("car_owner_id between", value1, value2, "carOwnerId");
+            return (Criteria) this;
+        }
+
+        public Criteria andCarOwnerIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("car_owner_id not between", value1, value2, "carOwnerId");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {

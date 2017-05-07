@@ -9,6 +9,9 @@
     <%@include file="base.jsp"%>
     <script type="text/javascript" src="${basePath}/resources/js/car.js"></script>
     <script type="text/javascript" src="${basePath}/resources/js/place.js"></script>
+    <script type="text/javascript" src="${basePath}/resources/js/md5.js"></script>
+    <script type="text/javascript" src="${basePath}/resources/js/carowner.js"></script>
+
     <script type="text/javascript">
         $(function () {
             var basePath = "${basePath }";
@@ -18,6 +21,8 @@
             image.preview("#car_file", "#uploadurl", "#car_preview", "#car_open_file");
             //添加车辆
             car.add(basePath);
+            //添加用户
+            carowner.add(basePath);
         })
     </script>
     <nav class="navbar navbar-inverse navbar-static-top">
@@ -38,23 +43,18 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#parking_place_modal" data-toggle="modal">添加停车场</a></li>
                     <li><a href="#car_modal" data-toggle="modal">添加车辆</a></li>
+                    <li><a href="#car_owner_modal" data-toggle="modal">注册</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">个人中心 <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">我的资料</a></li>
-                            <li><a href="#">我的车辆</a></li>
+                            <li><a href="${basePath}/carowner/${sessionScope.owner.id}">我的资料</a></li>
+                            <li><a href="${basePath}/car/list?ownerId=${sessionScope.owner.id}">我的车辆</a></li>
                             <li><a href="#">修改密码</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="#">停车记录</a></li>
                         </ul>
                     </li>
                 </ul>
-                <%--<form class="navbar-form navbar-right">--%>
-                    <%--<div class="form-group">--%>
-                        <%--<input type="text" class="form-control" placeholder="Search">--%>
-                    <%--</div>--%>
-                    <%--<button type="submit" class="btn btn-default">Submit</button>--%>
-                <%--</form>--%>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
@@ -130,6 +130,44 @@
                 <button type="button" class="btn btn-primary" id="car_submit">确定</button>
             </div>
         </div>
+    </div>
+</div>
+
+<!--用户注册 -->
+<div class="modal fade" id="car_owner_modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">注册</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label class="control-label">姓名</label>
+                        <input class="form-control" id="carowner_name">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">手机号码</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="carowner_phone">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">密码</label>
+                        <input type="password" class="form-control" id="carowner_password">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="carowner_submit">确定</button>
+            </div>
+        </div>
+
     </div>
 </div>
 

@@ -15,6 +15,28 @@ public class Parking {
 
     private Double price;
 
+    private Integer carOwnerId;
+
+    private ParkingPlace parkingPlace;
+
+    private Car car;
+
+    public Car getCar() {
+        return car;
+    }
+
+    public void setCar(Car car) {
+        this.car = car;
+    }
+
+    public ParkingPlace getParkingPlace() {
+        return parkingPlace;
+    }
+
+    public void setParkingPlace(ParkingPlace parkingPlace) {
+        this.parkingPlace = parkingPlace;
+    }
+
     public Integer getId() {
         return id;
     }
@@ -61,5 +83,13 @@ public class Parking {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public Integer getCarOwnerId() {
+        return carOwnerId;
+    }
+
+    public void setCarOwnerId(Integer carOwnerId) {
+        this.carOwnerId = carOwnerId;
     }
 }
