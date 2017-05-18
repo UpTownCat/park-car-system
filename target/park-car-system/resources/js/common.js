@@ -11,5 +11,17 @@ var common = {
                 }
             }
         })
+    },
+
+    remindAndRefalsh: function (content) {
+        $.confirm({
+            title: "提示",
+            "content": content,
+            buttons: {
+                "确定": function () {
+                    window.location.reload(true);
+                }
+            }
+        })
     }
 }

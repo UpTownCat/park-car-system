@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
 import java.util.Random;
@@ -17,7 +19,7 @@ import java.util.Random;
  * Created by Administrator on 2017/5/3.
  */
 public final class CommonUtil {
-
+    public static final long DAY = 1000 * 60 * 60 * 24;
     private static Properties prop = null;
     /**
      * 工具类不需实例化
@@ -158,6 +160,17 @@ public final class CommonUtil {
         if(millions < hour) {
             return moneyPerHour;
         }
-        return (millions % hour == 0 ? millions / hour : millions / hour + 1) * moneyPerHour;
+        return CommonUtil.formatDouble((millions % hour == 0 ? millions / hour : millions / hour + 1) * moneyPerHour);
+    }
+
+    /**
+     * 字符串转换为日期
+     * @param value
+     * @return
+     * @throws ParseException
+     */
+    public static final Date stringToDate(String value) throws ParseException {
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        return format.parse(value);
     }
 }

@@ -1,5 +1,6 @@
 package com.example.controller;
 
+import com.example.bean.Parking;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -28,5 +29,11 @@ public class HelloWorldController {
     public String testAjaxFileUpload(String name) {
         System.out.println("init ---- name = " + name);
         return "ok";
+    }
+
+    @RequestMapping(value = "/dataBinding", method = RequestMethod.GET)
+    public void testDataBinding(Parking parking){
+        System.out.println(parking);
+        System.out.println(parking.getCar().getBranch());
     }
 }

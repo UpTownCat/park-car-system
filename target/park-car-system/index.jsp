@@ -26,11 +26,10 @@
     </script>
 </head>
 <body>
-    <form action="${basePath}/hello/file">
-        <input type="file" name="file" id="photo">
-        <br>
-        <input type="text" name="name">
-        <br>
+    <form action="${basePath}/hello/dataBinding">
+        <input name="price" value="11">
+        <input type="datetime" name="inTime">
+        <input type="text" name="car.branch">
         <button type="submit">OK</button>
     </form>
 </body>

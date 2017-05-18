@@ -92,4 +92,17 @@ public class Parking {
     public void setCarOwnerId(Integer carOwnerId) {
         this.carOwnerId = carOwnerId;
     }
+
+    @Override
+    public String toString() {
+        return "Parking{" +
+                "id=" + id +
+                ", parkingSeatId=" + parkingSeatId +
+                ", carId=" + carId +
+                ", inTime=" + inTime +
+                ", outTime=" + outTime +
+                ", price=" + price +
+                ", carOwnerId=" + carOwnerId +
+                '}';
+    }
 }
